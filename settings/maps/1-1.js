@@ -39,7 +39,7 @@ PlayMarioJas.PlayMarioJas.settings.maps.library["1-1"] = {
                       { "text": "©1985 NINTENDO" }
                     ]
                 },
-                { "thing": "Block", "x": 128, "y": 32 },
+                { "thing": "Block", "x": 128, "y": 32, "isQuizBlock": true },
                 { "thing": "Brick", "x": 160, "y": 32 },
                 { "thing": "Block", "x": 168, "y": 32, "contents": "Mushroom" },
                 { "thing": "Goomba", "x": 176, "y": 8 },
@@ -57,7 +57,7 @@ PlayMarioJas.PlayMarioJas.settings.maps.library["1-1"] = {
                 { "thing": "Block", "x": 512, "y": 40, "contents": "Mushroom1Up", "hidden": true },
                 { "macro": "Floor", "x": 568, "width": 120 },
                 { "thing": "Brick", "x": 616, "y": 32 },
-                { "thing": "Block", "x": 624, "y": 32, "contents": "Mushroom" },
+                { "thing": "Block", "x": 624, "y": 32, "contents": "Mushroom", "isQuizBlock": true },
                 { "thing": "Brick", "x": 632, "y": 32 },
                 { "thing": "Brick", "x": 640, "y": 32 },
                 { "thing": "Goomba", "x": 640, "y": 72 },
@@ -110,7 +110,7 @@ PlayMarioJas.PlayMarioJas.settings.maps.library["1-1"] = {
                 { "macro": "Pipe", "x": 1304, "height": 16, "entrance": 1 },
                 { "thing": "Brick", "x": 1344, "y": 32 },
                 { "thing": "Brick", "x": 1352, "y": 32 },
-                { "thing": "Block", "x": 1360, "y": 32 },
+                { "thing": "Block", "x": 1360, "y": 32, "isQuizBlock": true },
                 { "thing": "Brick", "x": 1368, "y": 32 },
                 { "thing": "Goomba", "x": 1392, "y": 8 },
                 { "thing": "Goomba", "x": 1404, "y": 8 },

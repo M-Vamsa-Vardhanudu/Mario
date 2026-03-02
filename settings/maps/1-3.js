@@ -20,6 +20,7 @@ PlayMarioJas.PlayMarioJas.settings.maps.library["1-3"] = {
                 { "macro": "Tree", "x": 256, "y": 8, "width": 24 },
                 { "thing": "Coin", "x": 266, "y": 15 },
                 { "macro": "Tree", "x": 280, "y": 40, "width": 40 },
+                { "thing": "Block", "x": 296, "y": 56, "isQuizBlock": true },
                 { "macro": "Fill", "thing": "Coin", "x": 297, "y": 87, "xnum": 2, "xwidth": 8 },
                 { "macro": "Tree", "x": 320, "y": 72, "width": 56 },
                 { "macro": "Fill", "thing": "Goomba", "x": 352, "y": 80, "xnum": 2, "xwidth": 16 },
@@ -27,7 +28,7 @@ PlayMarioJas.PlayMarioJas.settings.maps.library["1-3"] = {
                 { "macro": "Fill", "thing": "Coin", "x": 402, "y": 55, "xnum": 2, "xwidth": 8 },
                 { "thing": "Platform", "x": 440, "y": 56, "width": 24, "floating": true, "begin": -4, "end": 56 },
                 { "macro": "Tree", "x": 472, "width": 40 },
-                { "thing": "Block", "x": 472, "y": 24, "contents": "Mushroom" },
+                { "thing": "Block", "x": 472, "y": 24, "contents": "Mushroom", "isQuizBlock": true },
                 { "macro": "Tree", "x": 480, "y": 64, "width": 32 },
                 { "macro": "Fill", "thing": "Coin", "x": 482, "y": 71, "xnum": 4, "xwidth": 8 },
                 { "macro": "Tree", "x": 520, "width": 40 },
@@ -42,6 +43,7 @@ PlayMarioJas.PlayMarioJas.settings.maps.library["1-3"] = {
                 { "macro": "Fill", "thing": "Coin", "x": 777, "y": 71, "xnum": 2, "xwidth": 8 },
                 { "macro": "Tree", "x": 784, "y": 16, "width": 32 },
                 { "macro": "Tree", "x": 832, "y": 48, "width": 64, "solidTrunk": true },
+                { "thing": "Block", "x": 856, "y": 64, "isQuizBlock": true },
                 { "thing": "Koopa", "x": 880, "y": 60, "smart": true },
                 { "macro": "Tree", "x": 904, "width": 24 },
                 { "macro": "Fill", "thing": "Coin", "x": 906, "y": 7, "xnum": 3, "xwidth": 8 },
@@ -55,7 +57,7 @@ PlayMarioJas.PlayMarioJas.settings.maps.library["1-3"] = {
                 { "thing": "Stone", "x": 1104, "y": 32, "width": 16, "height": 32 },
                 { "thing": "Stone", "x": 1120, "y": 48, "width": 16, "height": 48 },
                 { "thing": "Stone", "x": 1136, "y": 64, "width": 16, "height": 64 },
-                { "macro": "EndOutsideCastle", "x": 1224, "large": true, "walls": 12, "transport": { "map": "1-4" } }
+                { "macro": "EndOutsideCastle", "x": 1224, "large": true, "walls": 12, "transport": { "map": "1-1" } }
             ]
         }
     ]

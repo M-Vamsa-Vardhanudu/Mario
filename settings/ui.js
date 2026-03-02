@@ -35,7 +35,7 @@ var PlayMarioJas;
             },
             "Large": {
                 "width": Infinity,
-                "height": Infinity,
+                "height": 1080,
                 "full": false
             },
             "Full!": {
@@ -160,78 +160,11 @@ var PlayMarioJas;
                     });
                 })(["left", "right", "up", "down", "sprint", "pause"])
             }, {
-                "title": "Mods!",
-                "generator": "OptionsButtons",
-                "keyActive": "enabled",
-                "assumeInactive": true,
-                "options": function (FSM) {
-                    var mods = FSM.ModAttacher.getMods(), output = [], mod, i;
-                    for (i in mods) {
-                        if (!mods.hasOwnProperty(i)) {
-                            continue;
-                        }
-                        mod = mods[i];
-                        output.push({
-                            "title": mod.name,
-                            "source": function () { return mod.enabled; },
-                            "storeLocally": true,
-                            "type": "text"
-                        });
-                    }
-                    return output;
-                },
-                "callback": function (FSM, schema, button) {
-                    var name = button.textContent, key = button.getAttribute("localStorageKey"), mod = FSM.ModAttacher.getMod(name);
-                    FSM.ModAttacher.toggleMod(name);
-                    FSM.ItemsHolder.setItem(key, mod.enabled);
-                    FSM.ItemsHolder.saveItem(key);
-                }
-            }, {
                 "title": "Maps",
                 "generator": "MapsGrid",
-                "rangeX": [1, 4],
-                "rangeY": [1, 8],
-                "extras": [
-                    (function () {
-                        function getNewSeed() {
-                            return new Date().getTime()
-                                .toString()
-                                .split("")
-                                .sort(function () { return 0.5 - Math.random(); })
-                                .reverse()
-                                .join("");
-                        }
-                        return {
-                            "title": "Map Generator!",
-                            "callback": function (FSM, schema, button, event) {
-                                var parent = event.target.parentElement, randomizer = parent.querySelector(".randomInput");
-                                randomizer.value = randomizer.value.replace(/[^\d]/g, "");
-                                if (!randomizer.value) {
-                                    randomizer.value = getNewSeed();
-                                }
-                                FSM.LevelEditor.disable();
-                                FSM.NumberMaker.resetFromSeed(Number(randomizer.value));
-                                FSM.setMap("Random");
-                                if (!randomizer.getAttribute("custom")) {
-                                    randomizer.value = getNewSeed();
-                                }
-                            },
-                            "extraElements": [
-                                {
-                                    "tag": "input",
-                                    "options": {
-                                        "className": "randomInput maps-grid-input",
-                                        "type": "text",
-                                        "value": getNewSeed(),
-                                        "onchange": function (event) {
-                                            event.target.setAttribute("custom", "true");
-                                        }
-                                    }
-                                }
-                            ]
-                        };
-                    })()
-                ],
+                "rangeX": [1, 3],
+                "rangeY": [1, 1],
+                "extras": [],
                 "callback": function (FSM, schema, button) {
                     FSM.LevelEditor.disable();
                     FSM.setMap(button.getAttribute("value") || button.textContent);

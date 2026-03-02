@@ -13,12 +13,5 @@ document.onreadystatechange = function (event) {
     UserWrapper.GameStarter.UsageHelper.displayHelpMenu();
 };
   
-var manifest_iframe = document.createElement('iframe');
-		manifest_iframe.setAttribute("width","0")
-		manifest_iframe.setAttribute("height","0")
-		manifest_iframe.setAttribute("scrolling","no")
-		manifest_iframe.setAttribute("frameborder","0")
-		manifest_iframe.setAttribute("src","assets/manifest.html")
-		manifest_iframe.setAttribute("style","visibility:hidden;display:none")
-		manifest_iframe.setAttribute("seamless","seamless")
-document.body.appendChild(manifest_iframe);
+// manifest iframe removed - appcache is deprecated and this was causing
+// unnecessary network requests and DOM overhead on every page load
